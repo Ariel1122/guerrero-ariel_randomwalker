@@ -4,14 +4,16 @@
 let w1;
 let w2;
 let w3;
+let w4;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   // posX = windowHeight / 2;
   // posY = windowWidth / 2;
   w1 = new Walker(200, 200);
-  w2 = new Walker(200, 200);
+  w2 = new Walker(300, 300);
   w3 = new Walker(400, 400);
+  w4 = new Walker(500, 500);
 }
 
 function draw() {
@@ -21,6 +23,8 @@ function draw() {
   w2.display();
   w3.update();
   w3.display();
+  w4.update();
+  w4.display();
 
   // update();
   // fill(0);
@@ -55,12 +59,13 @@ class Walker {
 
   display() {
     fill(this.color);
-    noStroke();
-    circle(this.posX, this.posY, 10);
+    // noStroke();
+    strokeWeight(0.1);
+    circle(this.posX, this.posY, 20);
     if (this.forma) {
-      circle(this.posX, this.posY, 10);
+      circle(this.posX, this.posY, 20);
     } else {
-      rec(this.posX, this.posY, 10, 10);
+      rec(this.posX, this.posY, 20, 20);
     }
   }
 }
