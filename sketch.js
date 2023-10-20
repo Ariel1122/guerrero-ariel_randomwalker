@@ -25,20 +25,9 @@ function draw() {
   w3.display();
   w4.update();
   w4.display();
-
-  // update();
-  // fill(0);
-  // stroke(255, 50);
-  // strokeWeight(3);
-  // circle(posX, posY, 20);
 }
 
-// function update() {
-//   posX += random(-1, 2);
-//   posY += random(-vel, vel);
-// }
-
-// _posX, y Y son una variable externa para uso solo de la class
+// _X, y _Y son una variable externa para uso solo de la class
 class Walker {
   constructor(_x, _y) {
     this.posX = _x;
